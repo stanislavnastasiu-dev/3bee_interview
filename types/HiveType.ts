@@ -1,0 +1,31 @@
+import { GeoInfoType } from './GeoInfoType';
+import { HoneyType } from './HoneyType';
+import { GalleryType, VideoType } from './MediaType';
+import { OverallHoneyType } from './OverallHoneyType';
+import { PlanType } from './PlanType';
+
+export type HiveType = {
+  id: number;
+  name: string;
+  owner_id: number;
+  published: number;
+  owner_name: string;
+  queen_name: string;
+  queen_trait: string;
+  description: string;
+  latitude: number;
+  longitude: number;
+  race: string;
+  geo_info: GeoInfoType[];
+  main_image: string;
+  gallery: GalleryType[];
+  videos: VideoType[];
+  last_cache_update: string;
+  ranking: number;
+  image_profile: string;
+  honey: HoneyType;
+  additional_honeys: any[];
+  overall_honeys: OverallHoneyType[];
+  total_adopted_honey_quantity: number;
+  plans: PlanType[];
+};

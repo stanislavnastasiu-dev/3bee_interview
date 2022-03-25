@@ -1,0 +1,27 @@
+export type OverallHoneyType = {
+  id: number;
+  name: string;
+  description: string;
+  plant: string;
+  country: string;
+  colour: string;
+  consistency: string;
+  smell: string;
+  meaning: string;
+  taste: string;
+  rare: boolean;
+  special: boolean;
+  plant_icon: string;
+  web_image: string;
+  main_image: string;
+  phone_image: string;
+  beekeepers_ids: number[];
+  published_plans_honey_ids: number[];
+  regions_ids: any[];
+  av_quantity: number;
+  price: number;
+  ecommerce_price: number;
+  tot_quantity: number;
+  adop_quantity: number;
+  shipping_dates: string;
+};
