@@ -6,6 +6,7 @@ import {
   Button,
   Center,
   HStack,
+  Icon,
   IconButton,
   Image,
   SimpleGrid,
@@ -32,6 +33,9 @@ const ShopCard: React.FC<ShopCardProps> = ({
   debug = true,
 }) => {
   const [showVideo, setShowVideo] = useState(false);
+  const [videoSrc, setVideoSrc] = useState(
+    hive.videos.length > 0 ? hive.videos[0].url_video : ''
+  );
 
   return (
     <Card h='65vh' w='20vw' overflow={'hidden'}>
@@ -56,11 +60,29 @@ const ShopCard: React.FC<ShopCardProps> = ({
         zIndex={1}
       />
       {showVideo && (
-        <AspectRatio minW='auto' minH={'full'}>
-          <video preload='true' autoPlay>
-            <source src={hive.videos[0].url_video} />
-          </video>
-        </AspectRatio>
+        <Fragment>
+          {/* TODO: gestire video multipli */}
+          {/* <SimpleGrid zIndex={1} columns={1} columnGap={10}>
+            {hive.videos.map((vid, i) => (
+              <IconButton
+                aria-label={vid.description_video}
+                key={i}
+                position={'absolute'}
+                ml={2}
+                mt={2}
+                borderRadius={'full'}
+                icon={<HiPlay />}
+                onClick={() => setVideoSrc(vid.url_video)}
+                zIndex={1}
+              />
+            ))}
+          </SimpleGrid> */}
+          <AspectRatio minW='auto' minH={'full'}>
+            <video preload='true' autoPlay>
+              <source src={videoSrc} />
+            </video>
+          </AspectRatio>
+        </Fragment>
       )}
       {!showVideo && (
         <Fragment>
