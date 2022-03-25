@@ -128,7 +128,7 @@ const ShopCard: React.FC<ShopCardProps> = ({
                 </Box>
               </VStack>
             </Center>
-            <SimpleGrid columns={2} spacing={2} px={4}>
+            <SimpleGrid columns={2} spacing={6} px={4}>
               <Stat
                 mainText={hive.queen_name}
                 secondaryText={'Nome regina'}
