@@ -9,7 +9,7 @@ interface StatProps {
 
 const Stat: React.FC<StatProps> = ({ variant, mainText, secondaryText }) => {
   return (
-    <Box bgColor={`${variant}.400`} borderRadius={'lg'}>
+    <Box bgColor={`${variant}.400`} borderRadius={'full'}>
       <VStack textAlign={'center'} spacing={0}>
         <Text
           fontSize={'xs'}
