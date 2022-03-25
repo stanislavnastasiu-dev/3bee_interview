@@ -1,6 +1,6 @@
 export type GalleryType = {
   url_image: string;
-  description_image: string;
+  description_image: string | null;
 };
 
 export type VideoType = {
